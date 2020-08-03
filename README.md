@@ -13,4 +13,4 @@ Dependencies:
 + `ape`
 + `ggplot2` (used to hack an empty plot with `theme_void()`, please enjoy the hack).
 
-Available from (https://sjspielman.shinyapps.io/treemakeR)[https://sjspielman.shinyapps.io/treemakeR]
+Available from [https://sjspielman.shinyapps.io/treemakeR](https://sjspielman.shinyapps.io/treemakeR)
