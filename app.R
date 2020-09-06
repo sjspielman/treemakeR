@@ -64,6 +64,8 @@ ui <- fluidPage(theme = shinytheme("simplex"),
            #   radioButtons("show_scale",
            #             "Show scale bar?", choices = c("Yes", "No"), selected = "Yes")                
            # }),
+            sliderInput("space_between", 
+                        "Add space before tip label:", min = 0, max = 0.2, value = 0, step = 0.01),
             sliderInput("thickness", 
                         "Branch thickness:", min = 1, max = 10, value = 2, step = 0.5),
             colourpicker::colourInput("branch_color", "Branch color:", value = "#000000"),
@@ -194,6 +196,7 @@ server <- function(input, output) {
                cex = input$tip_size, 
                tip.color = input$tip_color,
                no.margin = TRUE, 
+               label.offset = input$space_between,
                direction = tree_orientation()) -> tree_plot
          # if (show_scale & use_bl) add.scale.bar(lwd = 2)
       }
